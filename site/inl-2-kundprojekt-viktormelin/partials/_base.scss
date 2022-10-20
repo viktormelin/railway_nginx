@@ -143,19 +143,35 @@
 
 			& blockquote {
 				quotes: '\201C''\201D';
+				position: relative;
 
 				&::before {
 					content: open-quote;
+					font-weight: bold;
+					font-size: 4rem;
+					color: white;
+					opacity: 30%;
+					font-family: Georgia, 'Times New Roman', Times, serif;
+					position: absolute;
+					margin-left: -1.5rem;
+					top: -1.5rem;
 				}
 
 				&::after {
 					content: close-quote;
+					font-weight: bold;
+					font-size: 4rem;
+					color: white;
+					opacity: 30%;
+					font-family: Georgia, 'Times New Roman', Times, serif;
+					position: absolute;
+					bottom: -2rem;
+					margin-left: -1.5rem;
 				}
 			}
 
 			&__left {
 				&__quote {
-					quotes: '"';
 					font-weight: 300;
 					font-style: italic;
 					font-size: 1.2rem;
