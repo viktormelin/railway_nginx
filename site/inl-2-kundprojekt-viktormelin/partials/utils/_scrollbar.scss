@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $pinkColor;
+	border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: hsl(321, 100%, 32%);
+}

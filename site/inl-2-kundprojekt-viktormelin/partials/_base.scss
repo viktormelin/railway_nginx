@@ -1,0 +1,226 @@
+@use './utils/variables' as *;
+@use './utils/reset';
+@use './utils/navbar';
+
+.first_page {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-image: url('../assets/photos/spaceman.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Rubik', sans-serif;
+
+	&__header {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		padding: 10vh 6vh;
+		transition: visibility 0.2s ease-in-out;
+
+		&__box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 12rem;
+			width: 11rem;
+			border: 0.25rem solid #000;
+			padding: 0.5rem;
+			background-color: rgba(255, 255, 255, 0.7);
+
+			& h1 {
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 2.5rem;
+				line-height: 2.75rem;
+			}
+
+			& a {
+				font-size: 0.8rem;
+				text-decoration: none;
+				color: #000;
+				position: absolute;
+				bottom: 5px;
+				right: 10px;
+
+				&:hover > svg {
+					transform: translate(5px, 0);
+				}
+
+				& svg {
+					margin-left: 0.25rem;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+
+	&__cta {
+		position: absolute;
+		bottom: 1rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		color: #fff;
+		font-size: 2.5rem;
+
+		& a {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+.second_page {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('../assets/photos/space.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Rubik', sans-serif;
+
+	&__header {
+		width: 100%;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		color: #fff;
+		transition: visibility 0.2s ease-in-out;
+
+		&__text {
+			display: flex;
+			// padding-top: 30px;
+			margin-bottom: 30px;
+
+			&__first {
+				z-index: 1;
+				font-size: 3rem;
+				// font-size: clamp(3rem, 4vw, 7vw);
+				text-shadow: 3px 3px 5px #000;
+
+				& > span {
+					position: relative;
+					font-family: 'Times New Roman', Times, serif;
+					margin-left: -115px;
+					top: 30px;
+					font-size: 4rem;
+					// font-size: clamp(4rem, 8vw, 9.4vw);
+					z-index: -1;
+					color: rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+	}
+
+	&__main {
+		overflow: hidden;
+		transition: visibility 0.2s ease-in-out;
+		height: 100%;
+
+		&__content {
+			padding: 0 20px;
+			color: #fff;
+			height: 100%;
+
+			& h3 {
+				font-size: 1.3rem;
+				margin-bottom: 0.5rem;
+			}
+
+			& p {
+				font-size: 0.75rem;
+				margin-bottom: 0.25rem;
+
+				& img {
+					display: none;
+				}
+			}
+
+			& blockquote {
+				quotes: '\201C''\201D';
+
+				&::before {
+					content: open-quote;
+				}
+
+				&::after {
+					content: close-quote;
+				}
+			}
+
+			&__left {
+				&__quote {
+					quotes: '"';
+					font-weight: 300;
+					font-style: italic;
+					font-size: 1.2rem;
+					margin-top: 1rem;
+					margin-bottom: 1rem;
+					padding: 0 2rem;
+				}
+			}
+
+			&__right {
+				&__quote {
+					display: none;
+				}
+			}
+
+			&__right__quote {
+				display: none;
+			}
+
+			&__special {
+				line-height: 1.3rem;
+			}
+
+			& a {
+				font-size: 0.8rem;
+				color: $pinkColor;
+
+				&:hover > svg {
+					margin-left: 0.75rem;
+				}
+
+				& svg {
+					margin-left: 0.25rem;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		color: $pinkColor;
+		width: 100%;
+		font-size: 0.7rem;
+		padding: 0.5rem;
+		background-color: hsla(278, 100%, 6%, 0.9);
+
+		& p {
+			text-shadow: 0 0 5px #e60073, 0 0 10px;
+		}
+
+		& button {
+			background-color: rgb(0, 24, 130);
+			border: none;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+
+			cursor: pointer;
+		}
+	}
+}
