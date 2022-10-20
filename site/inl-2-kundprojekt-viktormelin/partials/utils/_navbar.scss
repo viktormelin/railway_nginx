@@ -33,6 +33,10 @@
 			transform: rotate(-45deg) translate(-0, 1px);
 		}
 
+		& > input:hover ~ &__hamburger > span:nth-child(2) {
+			transform: translate(-10px);
+		}
+
 		&__hamburger {
 			position: absolute;
 			width: 40px;
