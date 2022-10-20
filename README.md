@@ -1,27 +1,8 @@
-# NGINX Example
+### Some form of _porfolio_ for my school projects
 
-This example is deploys a site using [NGINX](https://www.nginx.com/)
+[View Page](https://school.viktormelin.com)
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/o3MbZe)
+<br>
 
-
-## ✨ Features
-
-- NGINX
-- Static Site
-
-## 💁‍♀️ How to use
-
-- Open the `site/index.html` in the browser
-
-## 📝 Notes
-
-By default the `site/` directory gets deployed as a static site. This can be modified by changing the `Dockerfile`.
-
-The site is deployed using the default NGINX configuration. This can be overridden with a custom conf file by adding
-
-```
-COPY nginx.conf /etc/nginx/nginx.conf
-```
-
-to the end of the Dockerfile. For more information, [read the docs](https://hub.docker.com/_/nginx).
+> Hosted and deployed with  
+> <a href="https://railway.app?referralCode=Su0yhZ" target="_blank"><img src="https://img.shields.io/badge/-railway.app-0B0D0E?style=flat&logo=railway&logoColor=white" /></a>
