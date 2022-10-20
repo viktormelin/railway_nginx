@@ -1,0 +1,59 @@
+@use './utils/variables' as *;
+
+@media ($tabletWidth) {
+	.first_page {
+		&__header__box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 17rem;
+			height: 17rem;
+			border: 0.5rem solid #000;
+
+			& h1 {
+				font-size: 3.5rem;
+				line-height: 3rem;
+
+				& > br:first-of-type {
+					display: none;
+				}
+			}
+
+			& a {
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				font-size: 1.4rem;
+			}
+		}
+
+		&__cta {
+			display: none;
+		}
+	}
+
+	.second_page {
+		padding: 4rem;
+
+		&__main__content {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+
+			&__left__quote {
+				margin-top: 4rem;
+			}
+		}
+
+		&__footer {
+			height: 5rem;
+			padding: 1rem 2.5rem;
+			font-size: 0.8rem;
+			flex-direction: row;
+
+			& button {
+				padding: 0.5rem 0.75rem;
+			}
+		}
+	}
+}

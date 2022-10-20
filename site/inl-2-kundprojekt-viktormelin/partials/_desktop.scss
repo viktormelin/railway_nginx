@@ -1,6 +1,6 @@
 @use './utils/variables' as *;
 
-@media ($mediaWidth) {
+@media ($desktopWidth) {
 	.navbar {
 		& > input:hover ~ &__hamburger > span:nth-child(2) {
 			transform: translate(-8px, 0px);
