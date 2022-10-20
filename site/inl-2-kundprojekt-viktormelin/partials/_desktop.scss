@@ -109,6 +109,9 @@
 		}
 
 		&__main__content {
+			flex-direction: row;
+			gap: 0;
+
 			&__special {
 				br:first-of-type {
 					display: none;
