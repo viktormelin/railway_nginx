@@ -40,7 +40,7 @@ body {
 	&--margins {
 		margin-top: 1rem;
 		@include m.tabletUp {
-			margin-top: 20rem;
+			margin-top: 30vh;
 		}
 	}
 }
