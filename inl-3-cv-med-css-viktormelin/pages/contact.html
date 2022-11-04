@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Portfolio website for Viktor Mellin, aspiring front end developer currently studying at Medieinstitutet"
+		/>
+		<meta
+			name="keywords"
+			content="cv, resume, html, css, web development, web developer"
+		/>
+		<meta name="author" content="Viktor Mellin" />
+
+		<meta property="og:title" content="Contact Viktor Mellin" />
+		<meta
+			property="og:description"
+			content="Portfolio website for Viktor Mellin, aspiring front end developer currently studying at Medieinstitutet"
+		/>
+		<!-- <meta property="og:url" content="#" /> -->
+		<meta
+			property="og:image"
+			content="https://imagedelivery.net/3ecvmLCFkS-FijMWb0qFvQ/bbbccf8d-eebd-4fad-dc7b-6a3179bf7e00/public"
+		/>
+		<meta property="og:type" content="website" />
+
+		<title>Contact Viktor Mellin</title>
+
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Source+Serif+Pro:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/75888dd569.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="navbar">
+				<div class="container__inner">
+					<nav class="navbar__nav">
+						<button
+							aria-expanded="false"
+							aria-controls="menu"
+							class="navbar__nav_hamburger"
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+
+						<ul id="menu" class="navbar__nav_list">
+							<li>
+								<a class="text text--primary text--large" href="/">Home</a>
+							</li>
+							<li>
+								<a
+									class="text text--primary text--large"
+									href="/pages/about.html"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									class="text text--primary text--large selected"
+									href="/pages/contact.html"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<a
+									target="_blank"
+									class="text text--primary text--large"
+									href="https://school.viktormelin.com/uploads/viktormellin_cv_1.pdf"
+									>My CV</a
+								>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<main class="container">
+				<div class="container__inner">
+					<section class="header header--margins">
+						<h1 class="heading heading--primary">Contact me</h1>
+						<p class="text text--primary">
+							Connect with me on
+							<a
+								class="text--accent"
+								target="_blank"
+								href="https://www.linkedin.com/in/viktormelin/"
+								>LinkedIn</a
+							>
+							or fill out the form below
+						</p>
+						<div class="contact">
+							<form class="contact__form">
+								<div class="contact__form_input">
+									<label class="text text--small text--primary" for="email"
+										>E-mail</label
+									>
+									<div class="text text--secondary">
+										<input
+											class="text text--secondary"
+											type="text"
+											name="email"
+										/>
+										<i
+											class="text text--secondary text--large fa-solid fa-at"
+										></i>
+									</div>
+								</div>
+								<div class="contact__form_input">
+									<label class="text text--small text--primary" for="name"
+										>Name</label
+									>
+									<div class="">
+										<input
+											class="text text--secondary"
+											type="text"
+											name="name"
+										/>
+										<i
+											class="text text--secondary text--large fa-solid fa-signature"
+										></i>
+									</div>
+								</div>
+								<div class="contact__form_input">
+									<label class="text text--small text--primary" for="message"
+										>Message</label
+									>
+									<div class="">
+										<textarea
+											class="text text--secondary"
+											rows="1"
+											cols="10"
+											name="message"
+										></textarea>
+										<i
+											class="text text--secondary text--large fa-solid fa-align-left"
+										></i>
+									</div>
+								</div>
+								<div class="contact__form_button">
+									<button type="submit">
+										<p class="text text--dark">
+											Send <i class="fa-solid fa-paper-plane"></i>
+										</p>
+									</button>
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</main>
+
+			<script src="../script.js"></script>
+		</div>
+	</body>
+</html>

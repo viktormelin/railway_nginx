@@ -1,0 +1,90 @@
+@use './functions' as fn;
+
+.heading {
+	font-family: 'Source Serif Pro', serif;
+	color: #fff;
+
+	&--primary {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin: 1rem 0;
+	}
+
+	&--secondary {
+		font-family: 'Poppins', sans-serif;
+		font-size: 1.25rem;
+		color: #fff;
+
+		&-bold {
+			font-weight: 600;
+		}
+	}
+}
+
+.text {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+
+	&--primary {
+		color: fn.getColor(grey, '100');
+	}
+
+	&--secondary {
+		color: fn.getColor(yellow);
+	}
+
+	&--dark {
+		color: fn.getColor(grey, '500');
+	}
+
+	&--accent {
+		color: fn.getColor(yellow);
+	}
+
+	&--large {
+		font-size: 1.2rem;
+	}
+
+	&--small {
+		font-size: 0.75rem;
+	}
+}
+
+i {
+	font-size: inherit;
+	color: inherit;
+}
+
+.link {
+	font-family: 'Source Serif Pro', serif;
+	font-size: 1rem;
+	color: fn.getColor(grey, '200');
+	text-decoration: none;
+
+	&:hover {
+		color: fn.getColor(grey, '100');
+		background: radial-gradient(
+					farthest-side,
+					fn.getColor(grey, '100') 98%,
+					#0000
+				)
+				bottom left,
+			linear-gradient(fn.getColor(grey, '100') 0 0) bottom,
+			radial-gradient(farthest-side, fn.getColor(grey, '100') 98%, #0000) bottom
+				right;
+		background-size: 2px 2px, calc(100% - 2px) 2px;
+		background-repeat: no-repeat;
+		padding: 0.5rem 0;
+		// line-height: 2;
+		display: inline;
+		font-weight: bold;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+	}
+}
+
+.footer {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8rem;
+	// line-height: 0.7rem;
+}

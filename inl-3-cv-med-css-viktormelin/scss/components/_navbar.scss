@@ -1,0 +1,168 @@
+@use '../base/functions' as fn;
+@use '../abstracts' as m;
+
+.navbar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	padding: 0.5rem 1rem;
+	z-index: 10;
+	-webkit-user-select: none;
+	user-select: none;
+
+	@include m.tabletUp {
+		// padding: 2rem;
+		width: 64rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: fixed;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	&__nav {
+		@include m.tabletUp {
+			max-width: 60rem;
+			input,
+			&_hamburger {
+				display: none;
+			}
+		}
+
+		& > input {
+			width: 40px;
+			height: 35px;
+			position: absolute;
+			top: 8px;
+			right: 16px;
+			cursor: pointer;
+			opacity: 0;
+			z-index: 20;
+			-webkit-touch-callout: none;
+		}
+
+		& > button[aria-expanded='true'] > span:nth-child(1) {
+			transform: rotate(45deg) translate(-1px, -2px);
+		}
+
+		& > button[aria-expanded='true'] > span:nth-child(2) {
+			opacity: 0;
+			transform: rotate(0deg) scale(0.2, 0.2);
+		}
+
+		& > button[aria-expanded='true'] > span:nth-child(3) {
+			transform: rotate(-45deg) translate(-0, 1px);
+		}
+
+		& > button[aria-expanded='true'] > span {
+			background-color: fn.getColor(gray, '500');
+		}
+
+		& > button:hover > span:nth-child(2) {
+			transform: translate(-10px);
+		}
+		// & > input:checked ~ &_hamburger > span:nth-child(1) {
+		// 	transform: rotate(45deg) translate(-1px, -2px);
+		// }
+
+		// & > input:checked ~ &_hamburger > span:nth-child(2) {
+		// 	opacity: 0;
+		// 	transform: rotate(0deg) scale(0.2, 0.2);
+		// }
+
+		// & > input:checked ~ &_hamburger > span:nth-child(3) {
+		// 	transform: rotate(-45deg) translate(-0, 1px);
+		// }
+
+		// & > input:checked ~ &_hamburger > span {
+		// 	background-color: fn.getColor(gray, '500');
+		// }
+
+		// & > input:hover ~ &_hamburger > span:nth-child(2) {
+		// 	transform: translate(-10px);
+		// }
+
+		&_hamburger {
+			position: absolute;
+			width: 40px;
+			height: 35px;
+			top: 18px;
+			right: 15px;
+
+			& > span {
+				display: block;
+				width: 33px;
+				height: 5px;
+				margin-bottom: 5px;
+				position: relative;
+				background-color: fn.getColor(gray, '100');
+				border-radius: 5px;
+				z-index: 5;
+				transform-origin: 4px 0px;
+				transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+					background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+				&:first-child {
+					transform-origin: 0% 0%;
+				}
+
+				&:nth-child(3) {
+					transform-origin: 0% 100%;
+				}
+			}
+		}
+
+		& > button[aria-expanded='true'] ~ &_list {
+			transform: none;
+		}
+
+		&_list {
+			@include m.phoneOnly {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100vw;
+				height: 100vh;
+				transform-origin: -100% 0%;
+				transform: translate(100%, 0);
+				transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+				background-color: fn.getColor(gray, '400');
+				flex-direction: column;
+			}
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 3rem;
+
+			& > li {
+				& > a {
+					text-decoration: none;
+					padding: 0.5rem;
+
+					@include m.tabletUp {
+						transition: all 0.1s ease-in-out;
+
+						&:hover {
+							text-decoration: underline;
+							color: fn.getColor(yellow);
+						}
+					}
+
+					// @include m.phoneOnly {
+					// 	color: fn.getColor(gray, '500');
+					// }
+				}
+
+				.selected {
+					text-decoration: underline;
+					color: fn.getColor(yellow);
+				}
+			}
+		}
+	}
+}
